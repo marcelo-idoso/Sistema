@@ -1,0 +1,87 @@
+<div class=" x_panel">
+    <ol class="breadcrumb">
+         <li>
+            <a href="<?php echo $this->url('administracao') ?>">
+                <?php echo $this->translate('Início') ?>
+            </a>
+         </li>
+         <li class="active">
+             <?php echo $this->translate('Usuário') ?>
+         </li>
+    </ol>
+</div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Cadastrar Usuário</h2> 
+        <a class="btn btn-success navbar-right" href="<?php echo $this->url('usuario/default' , array('controller' => "Usuario" , 'action' => 'inserir' )) ; ?>" >
+            Novo Cadastro 
+        </a>
+        <div class="clearfix"></div>
+    </div>
+    
+
+<?php
+/**
+ * @var $entity \Usuario\Entity\Usuario 
+ */
+?>
+
+<br/>
+<?php 
+    if ($this->success){
+      echo  '<div class="alert alert-success">' . $this->success[0] . '
+                <button type="button" class="close" data-dismiss="alert">x</button>
+            </div>'; 
+    }
+    if ($this->error){
+       echo '<div class="alert alert-danger">' . $this->error[0] . '
+            <button type="button" class="close" data-dismiss="alert">x</button>
+       </div>'; 
+    }
+?>
+<table class="table table-bordered  table-condensed table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Nome</td>
+            <td>Login</td>
+            <td>E-mail</td>
+            <td>Status</td>
+            <td>Ação</td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php if ($this->data): ?>
+            <?php foreach ($this->data as $entity):?>
+                <tr>
+                    <td><?php echo $entity->getId()?></td>
+                    <td><?php echo $entity->getNome()?></td>
+                    <td><?php echo $entity->getLogin()?></td>
+                    <td><?php echo $entity->getEmail()?></td>
+                    <td><?php 
+                            switch ($entity->getStatus()):
+                                case
+                                    1: echo "Ativo" ; 
+                                        break;
+                                case
+                                    2: echo "Inativo" ;
+                                        break;
+                            endswitch;
+                        ?>
+                    </td>
+                    <td> 
+                        <a class="btn btn-success" href="<?php echo $this->url('usuario/default' , array('controller' => "Usuario" , 'action' => 'editar' , 'id' => $entity->getId())) ;?>">
+                            <i class=" btn-succes glyphicon glyphicon-pencil"></i> 
+                        </a>
+                        <a class="btn btn-danger" href="<?php echo $this->url('usuario/default' , array('controller' => "Usuario" , 'action' => 'excluir' , 'id' => $entity->getId())) ;?>">
+                            <i class=" btn-succes glyphicon glyphicon-remove"></i> 
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach;?>
+        <?php endif;?>        
+        
+    </tbody>
+</table>
+<div>

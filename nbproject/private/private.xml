@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Usuario/src/Usuario/Form/UsuarioForm.php</file>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Usuario/view/usuario/index/editar.phtml</file>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Usuario/src/Usuario/Form/UsuarioFilter.php</file>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Usuario/view/usuario/index/inserir.phtml</file>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Administracao/src/Administracao/Entity/AbstractEntity.php</file>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Usuario/src/Usuario/Controller/IndexController.php</file>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Administracao/src/Administracao/Controller/AbstractController.php</file>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Usuario/src/Usuario/Service/UsuarioService.php</file>
+            <file>file:/C:/xampp/htdocs/Cartorio/module/Usuario/src/Usuario/Entity/Usuario.php</file>
+        </group>
+    </open-files>
+</project-private>
